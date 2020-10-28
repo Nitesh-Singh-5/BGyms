@@ -14,7 +14,7 @@ var contactSchema = new mongoose.Schema({
     message: String,
 });
 
-// compiling the model
+// compiling the model yoo
 const contact = mongoose.model('contact', contactSchema);
 
 // sets template engine here "pugs"
