@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 8000;
 const app = express();
 
-// // For saving data into databases 
+//  For saving data into databases 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/contactGym', { useNewUrlParser: true, useUnifiedTopology: true });
 
