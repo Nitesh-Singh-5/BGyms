@@ -23,23 +23,7 @@ app.set('view engine', 'pug');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.post('/submit', (req, res) => {
-//     console.log("name :" + req.body.name)
-//     console.log("email :" + req.body.email)
-//     console.log("message :" + req.body.message)
-//     res.redirect('/');
-// })
-
-app.post('/submit', (req, res) => {
-    var myData = new contact(req.body);
-    myData.save().then(() => {
-        res.send("Thanks for your feedback")
-    }).catch(() => {
-        res.status(400).send("oops! try again ")
-    })
-    // res.status(200).render('index.pug')
-})
-
+# moongoose
 
 app.get('/', (req, res) => {
     res.render('index')
