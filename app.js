@@ -23,7 +23,7 @@ app.set('view engine', 'pug');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-#mongoose
+#  mongoose
 
 app.get('/', (req, res) => {
     res.render('index')
