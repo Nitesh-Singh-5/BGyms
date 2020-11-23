@@ -23,7 +23,16 @@ app.set('view engine', 'pug');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-#  mongoose
+app.post('/submit', (req, res) => {
+    var myData = new contact(req.body);
+    myData.save().then(() => {
+        res.send("Thanks for your feedback")
+    }).catch(() => {
+        res.status(400).send("oops! try again ")
+    })
+    // res.status(200).render('index.pug')
+})
+
 
 app.get('/', (req, res) => {
     res.render('index')
